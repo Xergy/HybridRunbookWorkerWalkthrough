@@ -29,11 +29,11 @@ Getting your first Hybrid Runbook Worker (HRW) running can be an experience.  I'
 
 1. Load required modules such at AzInfo and AZ CmdLets into Automation Account (For Azure Worker Testing Only i.e. optional)
 
-1. Try LogA Gui for joining VM to LogA.  Script can do this too, but it's easier to troubleshoot if it's done from the LogA Gui. Also, I'm not 100% the script below pulls down the latest version the Microsoft Monitoring Agent (MMA).
+1. Try LogA Gui for joining VM to LogA.  Script can do this too, but it's easier to troubleshoot if it's done from the LogA Gui. Also, I'm not 100% sure the script below pulls down the latest version the Microsoft Monitoring Agent (MMA).
 
 1. Fix up initialization sections of scripts in first runbooks, remove gov reference in add-account for example.
 
-1. As Admin, load required modules such at AzInfo and AZ CmdLets into ```C:\Program Files\WindowsPowerShell\Modules``` on the HRW.  
+1. As Admin, load required modules such as AzInfo and AZ CmdLets into ```C:\Program Files\WindowsPowerShell\Modules``` on the HRW.  
    **TIP:** *Download AzInfo module to HRW, unblock files!!!*
 
 1. Run ```New-OnPremiseHybridWorker.ps1```.  Sample parameter are shown in ```Create-OnPremiseHybridWorker.ps1.sample```
@@ -41,9 +41,9 @@ Getting your first Hybrid Runbook Worker (HRW) running can be an experience.  I'
 1. Import Automation Account Cert into HRW ```Export-RunAsCertificateToHybridWorker.ps1``` - via runbook.  
    https://docs.microsoft.com/en-us/azure/automation/automation-hrw-run-runbooks 
 
-1. Apply HRW workaround for storage account error,  See **Tips** below.
+1. Apply HRW workaround for AZ storage account CmdLet errors,  See **Tips** below.
 
-1. If you are working towards running AzIno, you will also need to setup a storage account.  See AzInfo readme for details.  There's also a good bit of environmental info needed for updates to ```New-AzInfo.ps1```.
+1. If you are working towards running AzIno, you will also need to setup a storage account.  See AzInfo readme for details.  There's also a good bit of environmental info needed for updates to ```New-AzInfo.ps1```. See sample in ```Sample_Scripts```.
 
 ## Tips and Tricks
 
