@@ -14,7 +14,7 @@ Getting your first Hybrid Runbook Worker (HRW) running can be an experience.  I'
 ## Steps 
 
 1. Build RG, VNet, VM.  
-   **NOTE:** *Terraform is included for a quick setup of this config in the lab (Steps 1-3), you will most likely have a good bit of this in place.*
+   > **NOTE:** *Terraform is included for a quick setup of this config in the lab (Steps 1-3), you will most likely have a good bit of this in place.*
 
 1. Create AutoAccount
 
@@ -34,16 +34,18 @@ Getting your first Hybrid Runbook Worker (HRW) running can be an experience.  I'
 1. Fix up initialization sections of scripts in first runbooks, remove gov reference in add-account for example.
 
 1. As Admin, load required modules such as AzInfo and AZ CmdLets into ```C:\Program Files\WindowsPowerShell\Modules``` on the HRW.  
-   **TIP:** *Download AzInfo module to HRW, unblock files!!!*
+   >  **TIP:** *Download AzInfo module to HRW, unblock files!!!*
 
 1. Run ```New-OnPremiseHybridWorker.ps1```.  Sample parameter are shown in ```Create-OnPremiseHybridWorker.ps1.sample```
 
 1. Import Automation Account Cert into HRW ```Export-RunAsCertificateToHybridWorker.ps1``` - via runbook.  
    https://docs.microsoft.com/en-us/azure/automation/automation-hrw-run-runbooks 
 
-1. Apply HRW workaround for AZ storage account CmdLet errors,  See **Tips** below.
+1. Apply HRW workaround for AZ storage account CmdLet errors,  
+   > See **Tips** below.
 
-1. If you are working towards running AzIno, you will also need to setup a storage account.  See AzInfo readme for details.  There's also a good bit of environmental info needed for updates to ```New-AzInfo.ps1```. See sample in ```Sample_Scripts```.
+1. If you are working towards running AzIno, you will also need to setup a storage account.  See AzInfo readme for details.  There's also a good bit of environmental info needed for updates to ```New-AzInfo.ps1```. 
+   > See sample in ```Sample_Scripts```.
 
 ## Tips and Tricks
 
