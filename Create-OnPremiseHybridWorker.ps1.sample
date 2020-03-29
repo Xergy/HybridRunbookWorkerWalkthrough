@@ -1,0 +1,7 @@
+
+.\New-OnPremiseHybridWorker.ps1 -AutomationAccountName hrwautoaccount `
+-AAResourceGroupName "hrwrg" `
+-OMSResourceGroupName "hrwrg" `
+-WorkspaceName "hrwloganalytics" `
+-HybridGroupName "HRWHybridGroup" `
+-SubscriptionID 3ba3ebad-7974-4e80-a019-3a61e0b7fa91
